@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation"
+            app:startDestination="@id/searchCityFragment">
+
+    <fragment
+            android:id="@+id/searchCityFragment"
+            android:name="in.nikhil.zomatovolleyconstraint.fragment.SearchCityFragment"
+            android:label="Search City"
+            tools:layout="@layout/search_city_fragment">
+        <action
+                android:id="@+id/action_searchCityFragment_to_listResturentsInCityFragment"
+                app:destination="@id/listResturentsInCityFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                />
+    </fragment>
+    <fragment
+            android:id="@+id/listResturentsInCityFragment"
+            android:name="in.nikhil.zomatovolleyconstraint.fragment.ListResturentsInCityFragment"
+            android:label="Resturents in {cityName}"
+            tools:layout="@layout/list_resturents_in_city_fragment">
+        <argument
+                android:name="city_id"
+                app:argType="integer"
+                app:nullable="false"
+                android:defaultValue="0"/>
+        <argument
+                android:name="cityName"
+                app:argType="string"
+                android:defaultValue="city"/>
+    </fragment>
+</navigation>

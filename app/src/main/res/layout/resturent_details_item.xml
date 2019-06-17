@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        android:layout_margin="12dp"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            >
+
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/ic_image_white_24dp"
+                android:background="@color/colorGrey"
+                tools:srcCompat="@tools:sample/backgrounds/scenic"
+                android:id="@+id/imgResturentBanner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:text="@string/restuent_name_goes_here"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvResturentName"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvRating"
+                app:layout_constraintTop_toBottomOf="@+id/imgResturentBanner"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+        <TextView
+                android:text="@string/sample_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvRating"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorPrimary"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="9dp"
+                app:layout_constraintStart_toEndOf="@+id/tvResturentName"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/imgResturentBanner"/>
+
+        <TextView
+                android:text="@string/address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAddress"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvRating"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <TextView
+                android:text="@string/currency_inr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvCurrency"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

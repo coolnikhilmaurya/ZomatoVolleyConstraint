@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Zomato</string>
+    <string name="enter_city">Enter city</string>
+    <string name="cityid">CityID</string>
+    <string name="cityname">CityName</string>
+    <string name="submit">Submit</string>
+    <string name="restuent_name_goes_here">Restuent name goes here</string>
+    <string name="sample_rate">4.7</string>
+    <string name="currency_inr">Currency - INR</string>
+    <string name="address">Address</string>
+    <string name="search">search</string>
+    <string name="search_history">Search History</string>
+    <string name="search_results">Search Results</string>
+</resources>
